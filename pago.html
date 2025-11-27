@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="checkout-container">
+
+    <div class="left-panel">
+      <h2 class="title">Pago con tarjeta</h2>
+
+      <div class="input-box">
+        <span>Producto:</span>
+        <span id="producto">Cargando...</span>
+      </div>
+
+      <div class="input-box">
+        <span>Monto:</span>
+        <span id="monto">Cargando...</span>
+      </div>
+
+      <div class="input-box">
+        <span>Nombre:</span>
+        <input type="text" id="nombre" placeholder="Nombre completo">
+      </div>
+
+      <div class="input-box">
+        <span>Tarjeta:</span>
+        <div class="card-field">
+          <input type="text" id="tarjeta" placeholder="1111 2222 3333 4444" maxlength="19">
+          <img id="icono-tarjeta" class="card-icon">
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="input-box">
+          <span>Mes:</span>
+          <input type="text" id="mes" placeholder="Agosto">
+        </div>
+        <div class="input-box">
+          <span>Año:</span>
+          <input type="number" id="anio" placeholder="2026">
+        </div>
+        <div class="input-box">
+          <span>CVV:</span>
+          <input type="number" id="cvv" placeholder="123">
+        </div>
+      </div>
+
+      <input type="email" id="correoClienteCard" placeholder="Tu correo">
+
+      <button id="btnCard" class="btn">Pagar tarjeta</button>
+    </div>
+
+
+    <div class="right-panel">
+      <h2 class="title">Transferencia bancaria</h2>
+
+      <div class="bank-box">
+        <p><strong>Banco:</strong> BBVA</p>
+        <p><strong>Cuenta:</strong> 01234567891</p>
+        <p><strong>CLABE:</strong> 123456789123456789</p>
+
+        <hr>
+
+      <form id="form-transferencia" enctype="multipart/form-data">
+
+  <p><strong>Subir comprobante:</strong></p>
+  <input type="file" id="comprobante" name="comprobante" accept="image/*,application/pdf">
+
+  <input type="email" id="correoCliente" name="correoCliente" placeholder="Tu correo">
+  <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Tu nombre">
+
+  <button type="button" id="btnTransfer" class="btn">Enviar comprobante</button>
+
+</form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="confirmacion" class="confirmacion">
+    <h3>✔ Pago recibido</h3>
+    <p><strong>Producto:</strong> <span id="c-prod"></span></p>
+    <p><strong>Monto:</strong> <span id="c-monto"></span></p>
+    <p><strong>Cliente:</strong> <span id="c-nombre"></span></p>
+    <p><strong>Detalle:</strong> <span id="c-tarjeta"></span></p>
+    <p><strong>Expira:</strong> <span id="c-expira"></span></p>
+    <p><strong>Fecha:</strong> <span id="c-fecha"></span></p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

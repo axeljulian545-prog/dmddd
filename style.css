@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #f4f6f8;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.left-panel, .right-panel {
+  background: #fff;
+  width: 420px;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.input-box {
+  margin-bottom: 12px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #6a5acd;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #4b3db0;
+}
+
+.confirmacion {
+  width: 880px;
+  margin: 18px auto;
+  padding: 20px;
+  background:#e9f5ff;
+  border-left: 4px solid #4CAF50;
+  display: none;
+}
+
+.error { border: 2px solid red !important; }
+.ok { border: 2px solid green !important; }
+
+.card-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-icon {
+  width: 40px;
+  display: none;
+}

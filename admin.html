@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;margin-top:20px;">Panel Administrador</h1>
+
+<div style="max-width:900px;margin:20px auto;">
+
+  <button id="btnRefresh">Refrescar</button>
+  <button id="btnLogout">Cerrar sesión</button>
+
+  <table border="1" width="100%" cellpadding="8" style="margin-top:20px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Producto</th>
+        <th>Monto</th>
+        <th>Método</th>
+        <th>Cliente</th>
+        <th>Archivo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <div id="detalle" style="margin-top:20px;"></div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
